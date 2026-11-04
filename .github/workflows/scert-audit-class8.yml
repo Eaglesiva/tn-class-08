@@ -1,0 +1,61 @@
+name: SCERT Class 8 Full Audit and Edition Processing
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'scert/class-08/audit-**'
+
+permissions:
+  contents: write
+
+jobs:
+  full_audit_and_edition_split:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install pymupdf requests
+
+      - name: Run Comprehensive Class 8 Audit and Ingestion
+        run: |
+          python .github/scripts/audit_class8_comprehensive.py
+
+      - name: Verify Git Safety & Check Staged Files
+        run: |
+          git status
+          # Verify zero master PDFs present
+          find . -maxdepth 4 -name "*.pdf" | grep -i "master" && exit 1 || echo "Zero master PDFs present in repo."
+
+      - name: Upload Complete Class 8 Audit Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: class-08-comprehensive-audit-evidence
+          path: |
+            class_08_official_api_snapshot.json
+            class_08_2026_27_audit_manifest.csv
+            class_08_audit_summary.md
+            audit_artifacts/
+            official_editions/
+          if-no-files-found: error
+
+      - name: Commit and Push Edition & Audit Files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add class_08_official_api_snapshot.json class_08_2026_27_audit_manifest.csv class_08_audit_summary.md official_editions/
+          git status --short
+          git commit -m "feat(scert): complete comprehensive Class 8 audit (28 records) and ingest all 2026 edition splits"
+          git push origin HEAD:${{ github.ref_name }}
