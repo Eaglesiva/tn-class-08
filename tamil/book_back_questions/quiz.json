@@ -340,6 +340,23 @@
     "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
   },
   {
+    "id": "8_tam_u2_q4",
+    "question": "\"நன்னிலம்\" என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______.",
+    "options": [
+      "நன் + நிலம்",
+      "நன்ன + நிலம்",
+      "நன்மை + நிலம்",
+      "நல் + நிலம்"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "பண்புப்பெயர் புணர்ச்சியில் ‘ஈறுபோதல்’ விதிப்படி ‘மை’ விகுதி கெட்டு, ‘நன்மை + நிலம்’ என்பது ‘நன்னிலம்’ எனப் புணரும்.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "User-confirmed textbook correction (2026-11-06); guide reference retained for context",
+    "additionalSourceUrls": [],
+    "verificationStatus": "USER_CONFIRMED_TEXTBOOK_CORRECTION",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
     "id": "8_tam_u2_q5",
     "question": "சீருக்கு + ஏற்ப என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல் _____.",
     "options": [
@@ -1955,6 +1972,23 @@
     "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit"
   },
   {
+    "id": "8_tam_u9_q8",
+    "question": "\"அறிவருள்\" என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______.",
+    "options": [
+      "அறிவு + அருள்",
+      "அறி + அருள்",
+      "அறிவு + இருள்",
+      "அறி + இருள்"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "‘உயிர்வரின் உக்குறள் மெய்விட்டோடும்’ என்ற புணர்ச்சி விதிப்படி ‘அறிவு + அருள்’ என்பது ‘அறிவருள்’ எனப் புணரும்.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit",
+    "sourceName": "User-confirmed textbook correction (2026-11-06); guide reference retained for context",
+    "additionalSourceUrls": [],
+    "verificationStatus": "USER_CONFIRMED_TEXTBOOK_CORRECTION",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit"
+  },
+  {
     "id": "8_tam_u9_q9",
     "question": "தூக்கி + கொண்டு என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல் _____.",
     "options": [
@@ -2020,6 +2054,23 @@
     "sourceName": "Brain Grain — Class 8 Tamil இயல் 9 Book Back Q&A",
     "additionalSourceUrls": [],
     "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit"
+  },
+  {
+    "id": "8_tam_u9_q13",
+    "question": "\"மல்லிகை சூடினாள்\" என்பது _______ ஆகுபெயர்.",
+    "options": [
+      "பொருளாகு பெயர்",
+      "இடவாகு பெயர்",
+      "காலவாகு பெயர்",
+      "சினையாகு பெயர்"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "மல்லிகை என்னும் முழு முதற்பொருளின் பெயர் அதன் உறுப்பாகிய மலரைக் குறிப்பதால் இது பொருளாகு பெயர் (முதலாகு பெயர்) ஆகும்.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit",
+    "sourceName": "User-confirmed textbook correction (2026-11-06); guide reference retained for context",
+    "additionalSourceUrls": [],
+    "verificationStatus": "USER_CONFIRMED_TEXTBOOK_CORRECTION",
     "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit"
   },
   {
