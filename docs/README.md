@@ -11,6 +11,7 @@
 ## Class-specific audit
 
 - [CLASS_08_TAMIL_EDITION_AUDIT_2026-11-06.md](./CLASS_08_TAMIL_EDITION_AUDIT_2026-11-06.md) — Class 8 Tamil unit-title / poem-title clarification, repository-owner edition confirmation, and a separate item-level transcription issue found during Step 1.
+- [CLASS_08_TAMIL_CONTENT_MAP_2026-11-06.md](./CLASS_08_TAMIL_CONTENT_MAP_2026-11-06.md) — இயல் 1 / 2 துணைப்பாடங்களின் சரியான வரிசை, தற்போதைய questions.md இருப்பிடம், தவறான folder placement மற்றும் கேள்வி coverage gaps.
 
 ## ஆவணங்களைப் பயன்படுத்தும் விதி
 
