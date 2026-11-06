@@ -8,7 +8,7 @@
 >
 > **Repository textbook pages:** [page_011.pdf](../page_011.pdf), [page_012.pdf](../page_012.pdf), [page_013.pdf](../page_013.pdf), [page_014.pdf](../page_014.pdf). These are the page files currently stored with this unit. The exact item-to-page visual comparison is still pending; therefore secondary-source agreement is recorded separately from textbook-page verification.
 >
-> **Answer sources:** [Nibunan — Class 8, Term I, Unit 1, Tamilmozhi Vaazhthu](https://nibunan.in/clear-tnpsc-tamil/); [BrainKart — Tamilmozhi Vaazhthu Q&A](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/); [BrainGrain — Class 8 Tamil Unit 1](https://braingrain.in/grade8-tamil/chapter_01-unit.html) (the page labels answers as guide-sourced / not independently verified; it is used only as a cross-check).
+> **Answer sources:** [BrainKart — Tamilmozhi Vaazhthu Q&A](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/); [Minnal Vegak Kanitham — Class 8 Tamil Unit 1](https://www.minnalvegakanitham.in/2025/01/day-19.html); [BrainGrain — Class 8 Tamil Unit 1](https://braingrain.in/grade8-tamil/chapter_01-unit.html) (the page labels answers as guide-sourced / not independently verified; it is used only as a cross-check).
 
 ---
 
@@ -36,7 +36,7 @@
 
 - **சரியான விடை:** (அ) வைப்பு.
 - **விளக்கம்:** ‘வைப்பு’ என்பது மக்கள் வாழும் நிலப்பகுதியைக் குறிக்கும் சொல்; இதன் பொருள் ‘நிலப்பகுதி’.
-- **Answer source:** [Nibunan](https://nibunan.in/clear-tnpsc-tamil/); [BrainKart](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/).
+- **Answer source:** [BrainKart](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/); [Minnal Vegak Kanitham](https://www.minnalvegakanitham.in/2025/01/day-19.html).
 - **Textbook page reference:** Unit repository pages 011–014; exact page not visually confirmed.
 - **நிலை:** ANSWER_SUPPORTED; TEXTBOOK_PAGE_VISUAL_CHECK_PENDING.
 
