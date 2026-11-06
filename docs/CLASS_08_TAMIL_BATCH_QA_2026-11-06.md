@@ -40,12 +40,11 @@ Master file:
 - Correct-answer indices were integer values from 0 through 3.
 - Required ID / question / source fields were present.
 - Every unit's `quiz.md` numbered-question count matched its `quiz.json` record count.
-- Two records had duplicate option text and were flagged `REVIEW_REQUIRED_DUPLICATE_OPTIONS`:
-  - Unit 2: `8_tam_u2_q4`
-  - Unit 9: `8_tam_u9_q8`
-- One additional Unit 9 record, `8_tam_u9_q13`, remains `REVIEW_REQUIRED` because the answer wording needs source confirmation.
-- The three review-required records were excluded from the Master Quiz.
-- Master Quiz records: **120**. All 120 have exactly four unique options and unique IDs.
+- Initial draft QA found three extraction issues: Unit 2 `8_tam_u2_q4`, Unit 9 `8_tam_u9_q8`, and Unit 9 `8_tam_u9_q13`.
+- On 2026-11-06, the repository owner supplied corrected textbook wording, four distinct options, answer indices, and grammar explanations for all three records.
+- The corrections were applied consistently to each Unit `answers.md`, `quiz.md`, and `quiz.json`; the records are marked `USER_CONFIRMED_TEXTBOOK_CORRECTION` (not represented as an independently performed visual PDF audit).
+- Master Quiz was rebuilt from all nine Unit JSON files after the corrections.
+- Master Quiz records: **123**. All 123 have exactly four unique options, valid correct indices, and unique IDs.
 
 ## Source quality and limits
 
@@ -56,12 +55,20 @@ Master file:
 - The current preliminary quiz sets are not yet demonstrated to contain every eligible book-back one-mark item from all nine textbook units. The numeric record counts above are records currently prepared, not a claim of complete book coverage.
 - In some units, the draft quiz includes a mix of textbook four-option MCQs and converted one-mark items. These need explicit source-by-source classification before final production.
 
+## Correction log — 2026-11-06
+
+| Record ID | Corrected question | Correct option | Status |
+|---|---|---|---|
+| `8_tam_u2_q4` | “நன்னிலம்” என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது | Index 2 — நன்மை + நிலம் | `USER_CONFIRMED_TEXTBOOK_CORRECTION` |
+| `8_tam_u9_q8` | “அறிவருள்” என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது | Index 0 — அறிவு + அருள் | `USER_CONFIRMED_TEXTBOOK_CORRECTION` |
+| `8_tam_u9_q13` | “மல்லிகை சூடினாள்” என்பது ஆகுபெயர் | Index 0 — பொருளாகு பெயர் | `USER_CONFIRMED_TEXTBOOK_CORRECTION` |
+
 ## Step status
 
 - Step 1: **PARTIAL** — one-mark references have been recorded; full question-by-question coverage and page/source reconciliation remain open. Long / descriptive answer content has not been written; placeholder-only scope retained.
 - Step 2: **DRAFTED / PARTIAL** — quiz Markdown created for all nine Units. Original textbook four-option items and converted one-mark items require complete source classification.
 - Step 3: **DRAFTED / PARTIAL** — quiz JSON created for all nine Units; three unresolved items excluded from Master.
-- Master sync: **DONE FOR CURRENT DRAFT SET** — 120 eligible current records combined into `tamil/book_back_questions/quiz.json`.
+- Master sync: **DONE FOR CURRENT DRAFT SET** — all 123 current Unit records combined into `tamil/book_back_questions/quiz.json`; 0 excluded due to the three corrected extraction defects.
 - Subject: **NOT COMPLETE** — do not mark Class 8 Tamil complete until source mapping, missing questions, excluded items and full coverage are reconciled.
 
 ## Next required work
