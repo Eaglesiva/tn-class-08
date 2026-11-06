@@ -28,6 +28,10 @@
 | 8. அறம் தத்துவம் சிந்தனை | [08_aram_thathuvam_sinthanai](./08_aram_thathuvam_sinthanai/) |
 | 9. மனிதம் ஆளுமை | [09_manitham_aalumai](./09_manitham_aalumai/) |
 
+## இயல் / துணைப்பாடம் கேள்வி கோப்பு இருப்பிடம்
+
+சில துணைப்பாடங்களின் பழைய `questions.md` கோப்புகள் தற்போது வேறு எண்ணுள்ள இயல் folder-களில் இருக்கலாம். அவற்றைத் தவறான இயலுடன் இணைக்காமல் பின்பற்ற வேண்டிய crosswalk: [CLASS_08_TAMIL_CONTENT_MAP_2026-11-06.md](../docs/CLASS_08_TAMIL_CONTENT_MAP_2026-11-06.md). கோப்புகளை நகர்த்துவதற்கு முன் source page, duplicate range, sub-lesson ஆகியவற்றை ஒப்பிடவும்.
+
 ## ஒவ்வொரு இயலிலும் பயன்படுத்த வேண்டிய கோப்புகள்
 
 - `book_back_questions/questions.md` — முதன்மை கேள்விப் பட்டியல்; கேள்வி வரிசையின் அடிப்படை.
