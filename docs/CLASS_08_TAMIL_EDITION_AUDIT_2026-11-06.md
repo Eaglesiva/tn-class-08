@@ -1,51 +1,49 @@
-# Class 8 Tamil — Book Edition Verification Audit
+# Class 8 Tamil — Book Edition Verification & Scope Audit
 
 - Audit date: 2026-11-06
-- Class: 8
-- Subject: Tamil
-- Medium: Tamil (repository page set appears Tamil medium; exact cover/imprint not yet verified)
-- Term / volume: Repository contains a consolidated annual page set (`tamil/pages.json` maps pages 11–232 across 9 lesson folders); current official 2026–27 Class 8 Tamil PDF not directly opened/verified.
-- Repository source: https://github.com/Eaglesiva/tn-class-08
-- Existing local pages: `tamil/01_tamil_inbam/page_011.pdf` onward; PDF bytes and imprint were not inspected in this audit.
-- Existing question source: `tamil/01_tamil_inbam/book_back_questions/questions.md`
-- Existing source references in questions.md: local Windows `file:///e:/...` HTML path only; not a durable public source URL.
+- Class / Subject / Medium: Class 8 / Tamil / Tamil Medium
+- Repository: https://github.com/Eaglesiva/tn-class-08
+- Page manifest: `tamil/pages.json` maps the consolidated textbook page set across nine unit folders.
+- Question source under active work: `tamil/01_tamil_inbam/book_back_questions/questions.md`
 
-## Evidence reviewed
+## Correction to the previous audit — false alarm resolved
 
-1. Government of Tamil Nadu / Tamil Nadu Textbook and Educational Services Corporation official website:
-   https://www.textbookcorp.in/
-   The website announces that Class 8 annual textbooks for academic year 2026–27 went on sale from 14-05-2026. This verifies that the new academic-year Class 8 annual textbook release exists, but the page does not expose a direct Class 8 Tamil PDF, exact edition/imprint, or lesson list.
-2. NDLI Standard VIII collection:
-   https://www.ndl.iitkgp.ac.in/se_document/tn_school_board/12345678_tnbrd/16130
-   Lists Class 8 Tamil/English Term I, Term II and Term III volumes. The opened Standard VIII collection confirms Department of School Education, Government of Tamil Nadu as content provider.
-3. NDLI item:
-   https://www.ndl.iitkgp.ac.in/se_document/tn_school_board/12345678_tnbrd/25434
-   Item metadata describes a combined Tamil/English Term I Volume I book, 8 pages, publisher Tamil Nadu Textbook and Educational Services Corporation, publisher date 2012-01-01. This is historical evidence, not proof of the currently prescribed edition.
-4. Third-party listing:
-   https://tnkalvi.online/textbooks/book/class-8-tm-full-year-tamil
-   Lists a full-year Class 8 Tamil PDF with filename `Class_8_Tamil_2025_Edition-www.tntextbooks.in.pdf` hosted through Google Drive. Third-party source, not an official Government-hosted file; not sufficient to establish current validity.
-5. Third-party listing:
-   https://ekalvi.in/class-8/class-8-tamil-tm-pdf/
-   Describes a 2024–25 full-year Class 8 Tamil edition and a syllabus sequence different from the repository's current lesson segmentation. Third-party source.
+The earlier audit incorrectly compared the **unit title** with the **title of a poem within that unit**:
 
-## Comparison / finding
+- Unit 1 title: **தமிழ் இன்பம்**
+- First poem / subsection: **தமிழ்மொழி வாழ்த்து**
+- Other contents in the unit, as confirmed by the repository owner: **தமிழ்மொழி மரபு**, **தமிழ் வரிவடிவ வளர்ச்சி**, and **எழுத்துகளின் பிறப்பு**.
 
-- Existing repository `questions.md` title for its first lesson is `01 தமிழ்மொழி வாழ்த்து` and its note maps the content to pages 11–14.
-- Public third-party 2024–25 listing describes a full-year textbook whose first unit is `இன்பத்தமிழ்` and provides a different structure.
-- The above mismatch suggests the repository's nine-lesson mapping / question extraction may represent a different book structure or an earlier source extraction. It must not be assumed to match the 2026–27 prescribed edition.
-- No file-level SHA-256 comparison with an official 2026–27 PDF was possible.
-- No official 2026–27 Tamil book cover, imprint, contents pages, or Book Back pages were directly inspected in this audit.
+These are hierarchical contents of the same unit, not evidence of two different textbook editions. The previous conclusion that the repository might contain an older edition merely because `questions.md` is titled `தமிழ்மொழி வாழ்த்து` was a false alarm and is withdrawn.
 
-## Decision
+## Edition decision
 
-**CURRENT_VALIDITY_UNVERIFIED**
+**USER_CONFIRMED_CURRENT_EDITION — ACCEPTED FOR THIS WORKFLOW**
 
-Reason: Official 2026–27 Class 8 annual textbook release is confirmed, but the exact Tamil PDF and its contents were not directly accessible for page-level and file-level comparison. Existing repository pages/questions must be preserved. Do not publish final answers or quizzes against a presumed edition until the exact intended book is verified.
+The repository owner explicitly confirmed on 2026-11-06 that the repository's questions are from the currently used Samacheer textbook and clarified the unit / poem title hierarchy. Work must continue using the existing repository source files; do not stop or ask for another PDF solely because the folder / lesson labels differ.
 
-## Next required evidence
+The official Tamil Nadu Textbook and Educational Services Corporation website separately confirms that Class 8 annual textbooks for academic year 2026–27 went on sale from 14-05-2026:
+https://www.textbookcorp.in/schools
 
-- Obtain the official 2026–27 Class 8 Tamil-medium annual PDF from the school / official SCERT or Textbook Corporation distribution channel.
-- Inspect cover, imprint, contents and each Book Back page.
-- Compare first and last pages and all nine lesson groups against the repository page set.
-- Record SHA-256 of official PDF and repository source PDF if both are available.
-- Only then start Step 1 answers for the verified edition.
+**Scope note:** This acceptance records the repository owner's edition confirmation for the requested workflow. It does not claim an independently completed official-PDF SHA-256 match or a visual audit of every textbook page. Those are separate evidence checks and must not be confused with the resolved unit-title / poem-title issue.
+
+## Separate content-integrity issue found in Unit 1
+
+During Step 1 source reconciliation, the fourth MCQ in `tamil/01_tamil_inbam/book_back_questions/questions.md` has a likely transcription / extraction defect:
+
+- Repository stem currently reads: `அறிந்து + அனைத்தும்`.
+- Repository options B and C are duplicated as `அறிந்தனைத்தும்`.
+- Multiple independent secondary answer pages render the textbook question as `அறிந்தது + அனைத்தும்`, with four distinct options, and identify `அறிந்ததனைத்தும்` as the answer:
+  - https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/
+  - https://braingrain.in/grade8-tamil/chapter_01-unit.html
+  - https://www.kalviimayam.com/2025/06/8th-tamil-unit-1-book-back-answer.html
+
+This is a **question-data integrity review**, not an edition mismatch. Preserve the original `questions.md` wording until the textbook page is visually checked. In `answers.md`, mark this item `REVIEW_REQUIRED` and do not silently choose an option or rewrite the original file.
+
+## Execution instruction
+
+- Continue with the existing `questions.md` files.
+- Follow `docs/BOOK_BACK_QUIZ_WORKFLOW_TA.md`: Step 1 first, then Step 2, then Step 3.
+- Do not request the user to upload another textbook PDF as a precondition.
+- Record actual unresolved source / transcription conflicts at item level.
+- Do not mark a unit COMPLETE while an item needed for Step 1 remains unresolved.
