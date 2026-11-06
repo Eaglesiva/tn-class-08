@@ -18,8 +18,9 @@
 
 - [Master Quiz JSON](./book_back_questions/quiz.json) — ஒன்பது இயல்களின் Unit JSON-களிலிருந்து ஒத்திசைக்கப்பட்டது.
 - தற்போதைய Unit Quiz JSON பதிவுகள்: 123.
-- Duplicate options / review-required காரணமாக Master-இல் சேர்க்கப்படாதவை: 3.
-- Master-ல் வெளியிடப்பட்டவை: 120.
+- Unit 2 Q4, Unit 9 Q8, Unit 9 Q13 ஆகிய மூன்று extraction பிழைகள் உரிமையாளர் வழங்கிய பாடநூல் திருத்தங்களின்படி சரிசெய்யப்பட்டுள்ளன.
+- Master-ல் வெளியிடப்பட்டவை: 123 / 123.
+- JSON QA: 123 unique IDs; ஒவ்வொரு பதிவிலும் 4 unique options மற்றும் 0–3 சரியான answer index.
 - ஒவ்வொரு Unit-லும் `quiz.md` மற்றும் `quiz.json` எண்ணிக்கை ஒத்திசைந்துள்ளது.
 - **நிலை: PARTIAL / DRAFT.** தற்போதைய `questions.md` கோப்புகளின் cross-unit placement மற்றும் முழுக் கேள்வி coverage இன்னும் சரிபார்க்கப்பட வேண்டும். இதை தமிழ் பாடம் COMPLETE என்று கருத வேண்டாம்.
 - விவரமான QA: [CLASS_08_TAMIL_BATCH_QA_2026-11-06.md](../docs/CLASS_08_TAMIL_BATCH_QA_2026-11-06.md).
