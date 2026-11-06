@@ -62,7 +62,7 @@
 - **விடை:** அ) போவது + இல்லை
 - **விளக்கம்:** ‘போவதில்லை’ என்பது ‘போவது + இல்லை’ எனப் பிரிகிறது.
 - **Source:** https://braingrain.in/grade8-tamil/chapter_09-unit
-- **Verification:** `GUIDE_REFERENCE`
+- **Verification:** `REVIEW_REQUIRED_DUPLICATE_OPTIONS` — இ மற்றும் ஈ விருப்பங்கள் duplicate.
 
 ### 9. தூக்கி + கொண்டு என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல் _____.
 
