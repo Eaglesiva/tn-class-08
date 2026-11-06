@@ -150,7 +150,7 @@
 
 **விளக்கம்:** ‘போவதில்லை’ என்பது ‘போவது + இல்லை’ எனப் பிரிகிறது.
 
-**நிலை:** `GUIDE_REFERENCE`
+**நிலை:** `REVIEW_REQUIRED_DUPLICATE_OPTIONS` — இ மற்றும் ஈ விருப்பங்கள் ஒரே உரை; Master Quiz-ல் சேர்க்கப்படவில்லை.
 
 **Source:** https://braingrain.in/grade8-tamil/chapter_09-unit
 
