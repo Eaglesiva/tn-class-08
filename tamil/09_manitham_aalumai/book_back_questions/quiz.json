@@ -120,19 +120,19 @@
   },
   {
     "id": "8_tam_u9_q8",
-    "question": "போவதில்லை என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _____.",
+    "question": "\"அறிவருள்\" என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______.",
     "options": [
-      "போவது + இல்லை",
-      "போ + இல்லை",
-      "போவது + தில்லை",
-      "போவது + தில்லை"
+      "அறிவு + அருள்",
+      "அறி + அருள்",
+      "அறிவு + இருள்",
+      "அறி + இருள்"
     ],
     "correctOptionIndex": 0,
-    "explanation": "‘போவதில்லை’ என்பது ‘போவது + இல்லை’ எனப் பிரிகிறது.",
+    "explanation": "‘உயிர்வரின் உக்குறள் மெய்விட்டோடும்’ என்ற புணர்ச்சி விதிப்படி ‘அறிவு + அருள்’ என்பது ‘அறிவருள்’ எனப் புணரும்.",
     "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit",
-    "sourceName": "Brain Grain — Class 8 Tamil இயல் 9 Book Back Q&A",
+    "sourceName": "User-confirmed textbook correction (2026-11-06); guide reference retained for context",
     "additionalSourceUrls": [],
-    "verificationStatus": "REVIEW_REQUIRED_DUPLICATE_OPTIONS",
+    "verificationStatus": "USER_CONFIRMED_TEXTBOOK_CORRECTION",
     "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit"
   },
   {
@@ -205,19 +205,19 @@
   },
   {
     "id": "8_tam_u9_q13",
-    "question": "சமத்துவச் சமுதாயம் அமைய அம்பேத்கர் ஏற்படுத்திய இயக்கம் ______.",
+    "question": "\"மல்லிகை சூடினாள்\" என்பது _______ ஆகுபெயர்.",
     "options": [
-      "சமாஜ் சமாத சங்கம்",
-      "சமாத சமாஜ பேரவை",
-      "தீண்டாமை ஒழிப்புப் பேரவை",
-      "மக்கள் நல இயக்கம்"
+      "பொருளாகு பெயர்",
+      "இடவாகு பெயர்",
+      "காலவாகு பெயர்",
+      "சினையாகு பெயர்"
     ],
     "correctOptionIndex": 0,
-    "explanation": "வழிகாட்டி விடைக்குறிப்பில் ‘சமாஜ் சமாத சங்கம்’ எனக் கொடுக்கப்பட்டுள்ளது; பாடநூல் பக்கத்துடன் மீண்டும் சரிபார்க்க வேண்டும்.",
+    "explanation": "மல்லிகை என்னும் முழு முதற்பொருளின் பெயர் அதன் உறுப்பாகிய மலரைக் குறிப்பதால் இது பொருளாகு பெயர் (முதலாகு பெயர்) ஆகும்.",
     "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit",
-    "sourceName": "Brain Grain — Class 8 Tamil இயல் 9 Book Back Q&A",
+    "sourceName": "User-confirmed textbook correction (2026-11-06); guide reference retained for context",
     "additionalSourceUrls": [],
-    "verificationStatus": "REVIEW_REQUIRED",
+    "verificationStatus": "USER_CONFIRMED_TEXTBOOK_CORRECTION",
     "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_09-unit"
   },
   {
