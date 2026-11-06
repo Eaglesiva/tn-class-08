@@ -1,133 +1,147 @@
 # எட்டாம் வகுப்பு தமிழ் — இயல் 1: தமிழ் இன்பம்
 
-## துணைப்பாடம்: தமிழ்மொழி வாழ்த்து — STEP 1: Answers & Evidence
+## STEP 1 — answers.md (Batch 1 reference extraction)
 
-> **Unit / lesson hierarchy:** **தமிழ் இன்பம்** என்பது இயல் 1-ன் பொதுத் தலைப்பு. **தமிழ்மொழி வாழ்த்து** அதற்குள் வரும் முதல் பாடல் / துணைப்பாடம். இரண்டும் ஒரே பாடநூல் அமைப்பைச் சேர்ந்தவை.
+> **Question file:** [questions.md](./questions.md)
 >
-> **Question source:** [questions.md](./questions.md)
+> **ஆதாரக் குறிப்பு:** இந்த batch-இல் ஒவ்வொரு இயலுக்கும் கிடைத்த chapter-wise reference page-இலிருந்து Objective விடைகள் தொகுக்கப்பட்டுள்ளன. Brain Grain தளம் தானே பதில்கள் third-party guide-இல் இருந்து வந்தவை; independently verified அல்ல என எச்சரிக்கிறது. எனவே `GUIDE_REFERENCE` status-ஐ `VERIFIED` என்று கருதக்கூடாது.
 >
-> **Repository textbook pages:** [page_011.pdf](../page_011.pdf), [page_012.pdf](../page_012.pdf), [page_013.pdf](../page_013.pdf), [page_014.pdf](../page_014.pdf). These are the page files currently stored with this unit. The exact item-to-page visual comparison is still pending; therefore secondary-source agreement is recorded separately from textbook-page verification.
->
-> **Answer sources:** [BrainKart — Tamilmozhi Vaazhthu Q&A](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/); [Minnal Vegak Kanitham — Class 8 Tamil Unit 1](https://www.minnalvegakanitham.in/2025/01/day-19.html); [BrainGrain — Class 8 Tamil Unit 1](https://braingrain.in/grade8-tamil/chapter_01-unit.html) (the page labels answers as guide-sourced / not independently verified; it is used only as a cross-check).
+> **முக்கியம்:** repository-யின் சில `questions.md` கோப்புகள் வேறு இயல்களின் பாடப்பகுதிகளைக் கொண்டிருப்பது Content Map-ல் பதிவு செய்யப்பட்டுள்ளது. இங்கே வழங்கிய கேள்விகள் இயலின் chapter-wise reference set-இல் இருந்து; மூல `questions.md` கோப்புகள் மாற்றப்படவில்லை.
 
----
+## Objective / One-mark answers
 
-## கற்பவை கற்றபின்
+### 1. மக்கள் வாழும் நிலப்பகுதியைக் குறிக்கும் சொல் _____.
 
-### 1. ‘தமிழ்மொழி வாழ்த்து’ – பாடலை இசையுடன் பாடி மகிழ்க.
+- **விடை:** அ) வைப்பு
+- **விளக்கம்:** ‘வைப்பு’ என்பது மக்கள் வாழும் நிலப்பகுதியைக் குறிக்கும் சொல்.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
 
-- **வகை:** வாய்மொழி / பாடல் செயல்பாடு.
-- **விடை:** எழுதித் தர வேண்டிய விடை இல்லை; பாடலை இசையுடன் பாடிப் பழகுதல்.
-- **நிலை:** NOT_APPLICABLE_AS_WRITTEN_ANSWER.
+### 2. ‘என்றென்றும்’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______.
 
-### 2. படித்துச் சுவைக்க — செந்தமிழ் அந்தாதி
+- **விடை:** ஆ) என்று + என்றும்
+- **விளக்கம்:** ‘என்றென்றும்’ என்பது ‘என்று + என்றும்’ எனப் பிரிகிறது.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
 
-- **வகை:** வாசிப்பு / சுவைத்தல் செயல்பாடு.
-- **விடை:** எழுதித் தர வேண்டிய தனி விடை இல்லை.
-- **நிலை:** NOT_APPLICABLE_AS_WRITTEN_ANSWER.
+### 3. ‘வானமளந்து’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______.
 
----
-
-## மதிப்பீடு
-
-### சரியான விடையைத் தேர்ந்தெடுத்து எழுதுக
-
-#### 1. மக்கள் வாழும் நிலப்பகுதியைக் குறிக்கும் சொல் _____.
-
-- **சரியான விடை:** (அ) வைப்பு.
-- **விளக்கம்:** ‘வைப்பு’ என்பது மக்கள் வாழும் நிலப்பகுதியைக் குறிக்கும் சொல்; இதன் பொருள் ‘நிலப்பகுதி’.
-- **Answer source:** [BrainKart](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/); [Minnal Vegak Kanitham](https://www.minnalvegakanitham.in/2025/01/day-19.html).
-- **Textbook page reference:** Unit repository pages 011–014; exact page not visually confirmed.
-- **நிலை:** ANSWER_SUPPORTED; TEXTBOOK_PAGE_VISUAL_CHECK_PENDING.
-
-#### 2. ‘என்றென்றும்’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______.
-
-- **சரியான விடை:** (ஆ) என்று + என்றும்.
-- **விளக்கம்:** ‘என்றென்றும்’ என்ற சொல் ‘என்று + என்றும்’ எனப் பிரிகிறது.
-- **Answer source:** [Nibunan](https://nibunan.in/clear-tnpsc-tamil/); [BrainKart](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/).
-- **Textbook page reference:** Unit repository pages 011–014; exact page not visually confirmed.
-- **நிலை:** ANSWER_SUPPORTED; TEXTBOOK_PAGE_VISUAL_CHECK_PENDING.
-
-#### 3. ‘வானமளந்து’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______.
-
-- **சரியான விடை:** (இ) வானம் + அளந்து.
+- **விடை:** இ) வானம் + அளந்து
 - **விளக்கம்:** ‘வானமளந்து’ என்பது ‘வானம் + அளந்து’ எனப் பிரிகிறது.
-- **Answer source:** [Nibunan](https://nibunan.in/clear-tnpsc-tamil/); [BrainKart](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/).
-- **Textbook page reference:** Unit repository pages 011–014; exact page not visually confirmed.
-- **நிலை:** ANSWER_SUPPORTED; TEXTBOOK_PAGE_VISUAL_CHECK_PENDING.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
 
-#### 4. அறிந்து + அனைத்தும் என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல் _____.
+### 4. வானம் + அறிந்த என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல் _____.
 
-- **questions.md-இல் உள்ள நிலை:** வினா stem “அறிந்து + அனைத்தும்” என உள்ளது; (ஆ), (இ) ஆகிய இரு options-லும் “அறிந்தனைத்தும்” என ஒரே உரை இரட்டிப்பாக உள்ளது.
-- **பிற ஆதாரங்களில் காணப்படும் வடிவம்:** பல தனித்தனி பாடவிடை ஆதாரங்கள் இந்த வினாவை “அறிந்தது + அனைத்தும்” என்று தருகின்றன; நான்கு options-ஐ வேறுபடுத்தி, விடையாக “அறிந்ததனைத்தும்” என்பதைக் குறிப்பிடுகின்றன.
-- **தற்காலிக விடை வேட்பாளர்:** அறிந்ததனைத்தும் — ஆனால் தற்போதைய questions.md stem/options-க்கு இதை உறுதியான விடையாக இணைக்க முடியாது.
-- **Answer sources:** [BrainKart](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/); [BrainGrain](https://braingrain.in/grade8-tamil/chapter_01-unit.html); [Kalvi Imayam](https://www.kalviimayam.com/2025/06/8th-tamil-unit-1-book-back-answer.html).
-- **தேவையான அடுத்த சரிபார்ப்பு:** repository PDF pages 011–014-ல் சம்பந்தப்பட்ட அச்சுப் பக்கத்தைப் பார்த்து stem மற்றும் நான்கு options-ஐ ஒப்பிட வேண்டும்.
-- **நிலை:** REVIEW_REQUIRED — SOURCE_TEXT_AND_OPTIONS_MISMATCH.
-- **குறிப்பு:** இந்தக் கேள்வியை அமைதியாகத் திருத்தவோ, தவறான option index-ஐ உருவாக்கவோ கூடாது. மூல questions.md மாற்றப்படவில்லை.
+- **விடை:** இ) வானமறிந்த
+- **விளக்கம்:** ‘வானம் + அறிந்த’ சேர்ந்து ‘வானமறிந்த’ என அமைகிறது.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
 
-#### 5. வானம் + அறிந்த என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல் _____.
+### 5. பறவைகள் ______ பறந்து செல்கின்றன.
 
-- **சரியான விடை:** (இ) வானமறிந்த.
-- **விளக்கம்:** ‘வானம் + அறிந்த’ சேரும்போது ‘வானமறிந்த’ என அமைகிறது.
-- **Answer source:** [Nibunan](https://nibunan.in/clear-tnpsc-tamil/); [BrainKart](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/).
-- **Textbook page reference:** Unit repository pages 011–014; exact page not visually confirmed.
-- **நிலை:** ANSWER_SUPPORTED; TEXTBOOK_PAGE_VISUAL_CHECK_PENDING.
+- **விடை:** ஆ) விசும்பில்
+- **விளக்கம்:** பறவைகள் விசும்பில் பறந்து செல்கின்றன.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
 
-### தமிழ்மொழி வாழ்த்து — இப்பாடலில் இடம்பெற்றுள்ள மோனைச் சொற்களை எடுத்தெழுதுக.
+### 6. இயற்கையைப் போற்றுதல் தமிழர் ______.
 
-- வாழ்க — வாழிய
-- வானமளந்தது — வண்மொழி
-- எங்கள் — என்றென்றும்
-- வாழ்க — வாழ்க
-- வானம் — வளர்மொழி
+- **விடை:** அ) மரபு
+- **விளக்கம்:** இயற்கையைப் போற்றுதல் தமிழர் மரபாகும்.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
 
-- **Answer source:** [BrainKart](https://www.brainkart.in/article/Poem--Tamil-mozhi-valthu--Questions-and-Answers_11403/); [BrainGrain](https://braingrain.in/grade8-tamil/chapter_01-unit.html).
-- **Textbook page reference:** Unit repository pages 011–014; exact page not visually confirmed.
-- **நிலை:** ANSWER_SUPPORTED_BY_SECONDARY_SOURCES; TEXTBOOK_PAGE_VISUAL_CHECK_PENDING.
+### 7. ‘இருதிணை’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _____.
 
----
+- **விடை:** அ) இரண்டு + திணை
+- **விளக்கம்:** ‘இருதிணை’ என்பது ‘இரண்டு + திணை’ எனப் பிரிகிறது.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
 
-## குறுவினா
+### 8. ‘ஐம்பால்’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _____.
 
-### 1. தமிழ் எங்குப் புகழ் கொண்டு வாழ்கிறது?
+- **விடை:** ஆ) ஐந்து + பால்
+- **விளக்கம்:** ‘ஐம்பால்’ என்பது ‘ஐந்து + பால்’ எனப் பிரிகிறது.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
+
+### 9. தமிழ் எழுத்துகள் இப்போதுள்ள நிலையான வடிவத்தைப் பெற ______ காரணமாக அமைந்தது.
+
+- **விடை:** இ) அச்சுக்கலை
+- **விளக்கம்:** தமிழ் எழுத்துகளின் நிலையான வரிவடிவ வளர்ச்சிக்கு அச்சுக்கலை முக்கியக் காரணமாக அமைந்தது.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `GUIDE_REFERENCE`
+
+### 10. வளைந்த கோடுகளால் அமைந்த மிகப்பழைய தமிழ் எழுத்து ______ என அழைக்கப்படுகிறது.
+
+- **விடை:** ஆ) வட்டெழுத்து
+- **விளக்கம்:** வளைந்த கோடுகளால் அமைந்த பழைய தமிழ் எழுத்து வட்டெழுத்து எனப்படுகிறது.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `GUIDE_REFERENCE`
+
+### 11. தமிழ் எழுத்துச் சீர்திருத்தப் பணியில் ஈடுபட்டவர் யார்?
+
+- **விடை:** ஆ) தந்தை பெரியார்
+- **விளக்கம்:** தமிழ் எழுத்துச் சீர்திருத்தப் பணியில் தந்தை பெரியார் ஈடுபட்டார்.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `GUIDE_REFERENCE`
+
+### 12. இதழ்களைக் குவிப்பதால் பிறக்கும் எழுத்துகள் _____.
+
+- **விடை:** ஆ) உ, ஊ
+- **விளக்கம்:** உ, ஊ ஆகிய உயிரெழுத்துகள் இதழ்களைக் குவிப்பதால் பிறக்கின்றன.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
+
+### 13. ஆய்த எழுத்து பிறக்கும் இடம் _____.
+
+- **விடை:** இ) தலை
+- **விளக்கம்:** ஆய்த எழுத்து தலையை இடமாகக் கொண்டு பிறக்கிறது.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
+
+### 14. வல்லின எழுத்துகள் பிறக்கும் இடம் _____.
+
+- **விடை:** ஆ) மார்பு
+- **விளக்கம்:** வல்லின மெய்யெழுத்துகள் மார்பை இடமாகக் கொண்டு பிறக்கின்றன.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
+
+### 15. நாவின் நுனி அண்ணத்தின் நுனியைப் பொருந்துவதால் பிறக்கும் எழுத்துகள் _____.
+
+- **விடை:** இ) ட், ண்
+- **விளக்கம்:** ட், ண் ஆகிய மெய்கள் நாவின் நுனி அண்ணத்தின் நுனியைப் பொருந்துவதால் பிறக்கின்றன.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
+
+### 16. கீழ்இதழும் மேல்வாய்ப்பல்லும் இணைவதால் பிறக்கும் எழுத்து _____.
+
+- **விடை:** ஈ) வ்
+- **விளக்கம்:** வ் என்ற மெய்யெழுத்து கீழ்இதழும் மேல்வாய்ப்பல்லும் இணைவதால் பிறக்கிறது.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `USER_REFERENCE_CROSSCHECK`
+
+### 17. மெய்யெழுத்துகளின் முயற்சிப் பிறப்பைச் சரியாகப் பொருத்திய வரிசை எது?
+
+- **விடை:** அ) 1-இ, 2-அ, 3-ஈ, 4-ஆ
+- **விளக்கம்:** க்,ங்—நாவின் முதல் பகுதி; ச்,ஞ்—நாவின் இடைப்பகுதி; ட்,ண்—நாவின் நுனி; த்,ந்—மேல்வாய்ப்பல்லின் அடி ஆகிய பொருத்தங்கள் சரியான வரிசையில் உள்ளன.
+- **Source:** https://braingrain.in/grade8-tamil/chapter_01-unit.html
+- **Verification:** `GUIDE_REFERENCE`
+
+## குறு / சிறு / நெடு / பயிற்சி வினாக்கள்
+
+இந்தப் பிரிவுகளுக்கான விடை உள்ளடக்கம் எழுதப்படவில்லை. ஒவ்வொரு நீள்விடை வினாவிற்கும் மூல `questions.md` வரிசையைப் பின்பற்றி கீழ்க்கண்ட மூன்று placeholders மட்டும் வைக்க வேண்டும்:
 
 - **விடைக்குறிப்பு:** 
 - **சாதாரண விடை:** 
 - **விரிவான விடை:** 
+- **Source:** [Unit question source](./questions.md) மற்றும் மேலே உள்ள chapter reference.
 
-### 2. தமிழ் எவற்றை அறிந்து வளர்கிறது?
+## STEP 1 நிலை
 
-- **விடைக்குறிப்பு:** 
-- **சாதாரண விடை:** 
-- **விரிவான விடை:** 
-
-## சிறுவினா
-
-### தமிழ்மொழியை வாழ்த்திப் பாரதியார் கூறும் கருத்துகளை எழுதுக.
-
-- **விடைக்குறிப்பு:** 
-- **சாதாரண விடை:** 
-- **விரிவான விடை:** 
-
-## சிந்தனை வினா
-
-### பாரதியார் தமிழை வண்மொழி என்று அழைக்கக் காரணம் என்ன?
-
-- **விடைக்குறிப்பு:** 
-- **சாதாரண விடை:** 
-- **விரிவான விடை:** 
-
----
-
-## STEP 1 நிலை அறிக்கை
-
-- **Question list:** questions.md-ல் உள்ள வினாக்களின் வரிசை இங்கே பாதுகாக்கப்பட்டுள்ளது.
-- **Answer-supported MCQ:** 4 / 5.
-- **Review required:** 1 / 5 — வினா 4-ல் stem / options முரண்பாடு.
-- **Other response:** மோனைச் சொற்கள் — secondary-source support கிடைத்தது; textbook page visual check நிலுவை.
-- **Long / descriptive questions:** கட்டாய placeholders மட்டும்; answer content எழுதப்படவில்லை.
-- **Source / page verification:** நேரடி secondary answer pages திறந்து பரிசோதிக்கப்பட்டன; repository PDF page 011–014-ஐ கண்களால் ஒப்பிடுவது இன்னும் நிலுவை.
-- **STEP 1:** BLOCKED — Q4 source text/options mismatch; page-level check pending.
-- **STEP 2:** தொடங்கப்படவில்லை; Step 1 முடிந்த பிறகே தொடங்க வேண்டும்.
-- **STEP 3:** தொடங்கப்படவில்லை; Step 2 முடிந்த பிறகே தொடங்க வேண்டும்.
+- இந்தக் கோப்பில் சேர்க்கப்பட்ட Objective reference பதிவுகள்: 17.
+- Guide-sourced answer-கள் தனியாகக் குறிக்கப்பட்டுள்ளன.
+- Questions.md completeness / original-book wording / page-by-page source reconciliation இன்னும் நிலுவையில் உள்ளது.
+- நீள்விடை உள்ளடக்கம் எழுதப்படவில்லை; placeholders மட்டும்.
+- **நிலை: PARTIAL — இந்த இயலை COMPLETE எனக் கருத வேண்டாம்.**
