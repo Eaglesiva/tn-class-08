@@ -8,6 +8,10 @@
 - [BOOK_EDITION_VERIFICATION_RULES_TA.md](./BOOK_EDITION_VERIFICATION_RULES_TA.md) — ஒவ்வொரு Class / Subject / Medium / Term / Volume-க்கும் தனித்தனியாகப் புத்தகப் பதிப்பைச் சரிபார்க்கும் விதிகள்.
 - [BOOK_BACK_QUIZ_WORKFLOW_TA.md](./BOOK_BACK_QUIZ_WORKFLOW_TA.md) — **கட்டாய Step 1 → Step 2 → Step 3 workflow**. Answers, Original MCQ, Transformed One-mark MCQ ஆகியவற்றின் செயல்முறை வரிசை மற்றும் QA விதிகள் இங்கே மட்டுமே canonical-ஆக வரையறுக்கப்படுகின்றன.
 
+## Class-specific audit
+
+- [CLASS_08_TAMIL_EDITION_AUDIT_2026-11-06.md](./CLASS_08_TAMIL_EDITION_AUDIT_2026-11-06.md) — Class 8 Tamil unit-title / poem-title clarification, repository-owner edition confirmation, and a separate item-level transcription issue found during Step 1.
+
 ## ஆவணங்களைப் பயன்படுத்தும் விதி
 
 - Edition verification முதலில்; அதன் பிறகு Book Back Quiz Workflow-இன் Step 1, Step 2, Step 3 என்ற வரிசை கட்டாயம்.
