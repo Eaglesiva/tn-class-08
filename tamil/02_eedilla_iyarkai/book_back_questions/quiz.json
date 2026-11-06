@@ -1,0 +1,274 @@
+[
+  {
+    "id": "8_tam_u2_q1",
+    "question": "பள்ளிக்குச் சென்று கல்வி ______ சிறப்பு.",
+    "options": [
+      "பயிலுதல்",
+      "பார்த்தல்",
+      "கேட்டல்",
+      "பாடுதல்"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "கல்வியைப் பயில்வதே பள்ளிக்குச் செல்வதன் சிறப்பாகும்.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q2",
+    "question": "செஞ்சொல் மாதரின் வள்ளைப் பாட்டிற்கேற்ப முழவை மீட்டுவது ______.",
+    "options": [
+      "கடல்",
+      "ஓடை",
+      "குளம்",
+      "கிணறு"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "ஓடையின் ஓசை வள்ளைப் பாட்டிற்கேற்ப முழவை மீட்டுவது போல் கூறப்படுகிறது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "USER_REFERENCE_CROSSCHECK",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q3",
+    "question": "‘நன்செய்’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _____.",
+    "options": [
+      "நன் + செய்",
+      "நன்று + செய்",
+      "நன்மை + செய்",
+      "நல் + செய்"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "‘நன்செய்’ என்பது ‘நன்மை + செய்’ எனப் பிரிகிறது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "USER_REFERENCE_CROSSCHECK",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q4",
+    "question": "‘நீளுழைப்பு’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _____.",
+    "options": [
+      "நீளு + உழைப்பு",
+      "நீண் + உழைப்பு",
+      "நீள் + உழைப்பு",
+      "நீள் + உழைப்பு"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "விடைக்குறிப்பு ‘நீள் + உழைப்பு’ எனக் காட்டுகிறது; C மற்றும் D விருப்பங்கள் நகலாக உள்ளதால் index உறுதி செய்யப்படவில்லை.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "REVIEW_REQUIRED_DUPLICATE_OPTIONS",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q5",
+    "question": "சீருக்கு + ஏற்ப என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல் _____.",
+    "options": [
+      "சீருக்கு ஏற்ப",
+      "சீருக்கேற்ப",
+      "சீர்க்கேற்ப",
+      "சீருகேற்ப"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "‘சீருக்கு + ஏற்ப’ சேர்ந்து ‘சீருக்கேற்ப’ என அமைகிறது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q6",
+    "question": "ஓடை + ஆட என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல் _____.",
+    "options": [
+      "ஓடைஆட",
+      "ஓடையாட",
+      "ஓடையோட",
+      "ஓடைவாட"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "‘ஓடை + ஆட’ சேர்ந்து ‘ஓடையாட’ என அமைகிறது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q7",
+    "question": "வானில் கரு ______ தோன்றினால் மழை பொழியும் என்பர்.",
+    "options": [
+      "முகில்",
+      "துகில்",
+      "வெயில்",
+      "கயல்"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "கருமுகில் தோன்றினால் மழை பொழியும் எனப்படுகிறது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q8",
+    "question": "முறையான உடற்பயிற்சியும் சரிவிகித உணவும் ______ யும் ஓட்டிவிடும்.",
+    "options": [
+      "பாலனை",
+      "காலனை",
+      "ஆற்றலை",
+      "நலத்தை"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "சரியான உடற்பயிற்சியும் உணவும் காலனை ஓட்டிவிடும் என்ற கருத்து.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q9",
+    "question": "‘விழுந்ததங்கே’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _____.",
+    "options": [
+      "விழுந்த + அங்கே",
+      "விழுந்த + ஆங்கே",
+      "விழுந்தது + அங்கே",
+      "விழுந்தது + ஆங்கே"
+    ],
+    "correctOptionIndex": 3,
+    "explanation": "கொடுக்கப்பட்ட விடைக்குறிப்பில் ‘விழுந்தது + ஆங்கே’ என உள்ளது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q10",
+    "question": "செவ்விந்தியர்கள் நிலத்தைத் ______ மதிக்கின்றனர்.",
+    "options": [
+      "தாயாக",
+      "தந்தையாக",
+      "தெய்வமாக",
+      "தூய்மையாக"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "செவ்விந்தியர்கள் நிலத்தைத் தாயாக மதிக்கின்றனர்.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q11",
+    "question": "‘இன்னோசை’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _____.",
+    "options": [
+      "இன் + ஓசை",
+      "இனி + ஓசை",
+      "இனிமை + ஓசை",
+      "இன் + னோசை"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "‘இன்னோசை’ என்பது ‘இனிமை + ஓசை’ எனப் பிரிகிறது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q12",
+    "question": "பால் + ஊறும் என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல் _____.",
+    "options": [
+      "பால் ஊறும்",
+      "பாலூறும்",
+      "பால்லூறும்",
+      "பாஊறும்"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "‘பால் + ஊறும்’ சேர்ந்து ‘பாலூறும்’ என அமைகிறது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q13",
+    "question": "பின்வருவனவற்றுள் ஏவல் வினைமுற்றுச் சொல் எது?",
+    "options": [
+      "செல்க",
+      "ஓடு",
+      "வாழ்க",
+      "வாழிய"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "விடைக்குறிப்பில் ஏவல் வினைமுற்றாக ‘செல்க’ குறிப்பிடப்பட்டுள்ளது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q14",
+    "question": "புகழாலும் பழியாலும் அறியப்படுவது ______.",
+    "options": [
+      "அடக்கமுடைமை",
+      "நாணுடைமை",
+      "நடுவுநிலைமை",
+      "பொருளுடைமை"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "புகழாலும் பழியாலும் அறியப்படுவது நடுவுநிலைமை.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q15",
+    "question": "பயனில்லாத களர்நிலத்திற்கு ஒப்பானவர்கள் ______.",
+    "options": [
+      "வலிமையற்றவர்",
+      "கல்லாதவர்",
+      "ஒழுக்கமற்றவர்",
+      "அன்பில்லாதவர்"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "பயனில்லாத களர்நிலத்திற்கு ஒப்பாகக் கல்லாதவர்கள் கூறப்படுகின்றனர்.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  },
+  {
+    "id": "8_tam_u2_q16",
+    "question": "‘வருமுன்னர்’ எனத் தொடங்கும் குறளில் பயின்று வந்துள்ள அணி _____.",
+    "options": [
+      "எடுத்துக்காட்டு உவமை அணி",
+      "தற்குறிப்பேற்ற அணி",
+      "உவமை அணி",
+      "உருவக அணி"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "குறளில் உவமை அணி இடம்பெறுகிறது.",
+    "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
+    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "additionalSourceUrls": [],
+    "verificationStatus": "GUIDE_REFERENCE",
+    "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
+  }
+]
