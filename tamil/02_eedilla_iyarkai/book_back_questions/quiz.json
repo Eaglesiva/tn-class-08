@@ -52,19 +52,19 @@
   },
   {
     "id": "8_tam_u2_q4",
-    "question": "‘நீளுழைப்பு’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _____.",
+    "question": "\"நன்னிலம்\" என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______.",
     "options": [
-      "நீளு + உழைப்பு",
-      "நீண் + உழைப்பு",
-      "நீள் + உழைப்பு",
-      "நீள் + உழைப்பு"
+      "நன் + நிலம்",
+      "நன்ன + நிலம்",
+      "நன்மை + நிலம்",
+      "நல் + நிலம்"
     ],
     "correctOptionIndex": 2,
-    "explanation": "விடைக்குறிப்பு ‘நீள் + உழைப்பு’ எனக் காட்டுகிறது; C மற்றும் D விருப்பங்கள் நகலாக உள்ளதால் index உறுதி செய்யப்படவில்லை.",
+    "explanation": "பண்புப்பெயர் புணர்ச்சியில் ‘ஈறுபோதல்’ விதிப்படி ‘மை’ விகுதி கெட்டு, ‘நன்மை + நிலம்’ என்பது ‘நன்னிலம்’ எனப் புணரும்.",
     "sourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit",
-    "sourceName": "Brain Grain — Class 8 Tamil இயல் 2 Book Back Q&A",
+    "sourceName": "User-confirmed textbook correction (2026-11-06); guide reference retained for context",
     "additionalSourceUrls": [],
-    "verificationStatus": "REVIEW_REQUIRED_DUPLICATE_OPTIONS",
+    "verificationStatus": "USER_CONFIRMED_TEXTBOOK_CORRECTION",
     "explanationSourceUrl": "https://braingrain.in/grade8-tamil/chapter_02-unit"
   },
   {
