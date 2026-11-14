@@ -2,360 +2,863 @@
 <html lang="ta">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>தமிழ்நாடு அரசுப் பாடநூல் — அசல் அச்சுப் பார்வை</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
+  <title>தமிழ்நாடு பாடநூல் அசல் அச்சுப் பார்வை</title>
   <script src="./vendor/pdfjs/pdf.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: #0f172a;
+    html, body {
+      background: #0b1329;
       color: #f8fafc;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Tamil", sans-serif;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      height: 100vh;
-      overflow: hidden;
     }
-    header {
-      background-color: #1e293b;
-      padding: 10px 16px;
+
+    /* Enterprise Glassmorphic Header Toolbar - 2 Responsive Rows */
+    .viewer-header-bar {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      padding: 6px 14px 8px 14px;
+      z-index: 100;
+      user-select: none;
+      gap: 6px;
+    }
+
+    .header-row {
+      display: flex;
       align-items: center;
-      border-bottom: 1px solid #334155;
-      z-index: 10;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
       gap: 8px;
     }
+
+    .header-row-controls {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
     .header-left {
       display: flex;
       align-items: center;
-      gap: 12px;
-      flex-shrink: 1;
-      min-width: 0;
+      gap: 10px;
+      min-width: 140px;
+      overflow: hidden;
     }
-    .back-btn {
-      background: #0284c7;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 6px 12px;
+    .doc-badge {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 8px;
       border-radius: 6px;
-      font-size: 13px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
       white-space: nowrap;
-      transition: background 0.15s;
     }
-    .back-btn:hover { background: #0369a1; }
-    .book-title {
-      font-size: 14px;
-      font-weight: 600;
+    .doc-title {
+      font-size: 13.5px;
+      font-weight: 700;
       color: #f1f5f9;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 480px;
+      max-width: 320px;
     }
-    .controls {
+
+    /* Centered Zoom & Responsive Fit Controls */
+    .header-center {
       display: flex;
       align-items: center;
-      gap: 8px;
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      padding: 2px 6px;
+      gap: 3px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
     }
-    .btn {
-      background: #334155;
-      color: #f8fafc;
-      border: 1px solid #475569;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 13px;
+    .tool-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 999px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
-      transition: background 0.15s;
+      gap: 5px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
     }
-    .btn:hover:not(:disabled) { background: #475569; }
-    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
-    .page-info {
-      font-size: 13px;
-      font-weight: 600;
-      min-width: 80px;
-      text-align: center;
-    }
-    .jump-input {
-      width: 54px;
-      background: #0f172a;
-      border: 1px solid #475569;
+    .tool-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
       color: #ffffff;
-      padding: 4px 6px;
-      border-radius: 4px;
+    }
+    .tool-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(2, 132, 199, 0.5);
+    }
+    .zoom-text {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #38bdf8;
+      min-width: 44px;
       text-align: center;
-      font-size: 13px;
     }
-    main {
-      flex: 1;
-      overflow: auto;
+
+    /* Book Page Navigation Arrows (Visible everywhere) */
+    .nav-page-group {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 20px 10px;
-      position: relative;
-    }
-    #canvasContainer {
-      display: flex;
-      justify-content: center;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-      border-radius: 4px;
-      overflow: hidden;
-      background: #ffffff;
-    }
-    canvas { display: block; max-width: 100%; height: auto; }
-    .nav-arrow {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
+      align-items: center;
       background: rgba(30, 41, 59, 0.85);
-      border: 1px solid #475569;
-      color: #ffffff;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      padding: 2px 6px;
+      gap: 3px;
+    }
+
+    /* Right Action Buttons (Fullscreen, Download, Pop-out) */
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .icon-action-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 15px;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      font-size: 20px;
-      z-index: 20;
-      transition: background 0.15s, transform 0.15s;
+      transition: all 0.15s ease;
     }
-    .nav-arrow:hover:not(:disabled) {
-      background: #0284c7;
-      transform: translateY(-50%) scale(1.08);
+    .icon-action-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #38bdf8;
     }
-    .nav-arrow:disabled { opacity: 0.25; cursor: not-allowed; }
-    .nav-prev { left: 16px; }
-    .nav-next { right: 16px; }
+    .icon-action-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #eab308;
+      margin: 0 4px;
+      transition: background 0.3s ease;
+    }
+    .status-dot.cached {
+      background: #10b981;
+    }
+
+    /* 2D Scroll Area */
+    .viewport-scroll-area {
+      flex: 1;
+      width: 100%;
+      overflow: auto;
+      position: relative;
+      background: #0b1329;
+      display: flex;
+      padding: 16px 14px 36px 14px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .viewport-scroll-area::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    .viewport-scroll-area::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .viewport-scroll-area::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 5px;
+      border: 2px solid #0b1329;
+    }
+    .viewport-scroll-area::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    /* Canvas Wrapper & 2D Pan */
+    .canvas-wrapper {
+      margin: auto;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.75);
+      border-radius: 6px;
+      background: #ffffff;
+      line-height: 0;
+      transition: box-shadow 0.2s ease;
+    }
+    .canvas-wrapper.draggable {
+      cursor: grab;
+    }
+    .canvas-wrapper.grabbing {
+      cursor: grabbing;
+    }
+
+    canvas {
+      display: block;
+      border-radius: 6px;
+    }
+
+    /* Loading Skeleton */
     .loading-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(15, 23, 42, 0.85);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(6px);
+      border-radius: 6px;
+      transition: opacity 0.3s ease;
       gap: 12px;
-      z-index: 30;
+      z-index: 10;
+    }
+    .loading-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
     }
     .spinner {
       width: 36px;
       height: 36px;
-      border: 3px solid #334155;
+      border: 3px solid rgba(56, 189, 248, 0.2);
       border-top-color: #38bdf8;
       border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+      animation: spin 0.7s linear infinite;
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .hidden { display: none !important; }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .loading-text {
+      font-size: 13px;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+  
+    /* Floating Center Screen Nav Turners (Auto-Fading Thumb Navigation) */
+    .floating-nav-arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 28px;
+      font-weight: 300;
+      z-index: 95;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      transition: opacity 0.35s ease, background 0.15s, transform 0.15s;
+      opacity: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+    .floating-nav-arrow.visible {
+      opacity: 0.9;
+      pointer-events: auto;
+    }
+    .floating-nav-arrow:hover:not(:disabled) {
+      opacity: 1 !important;
+      background: #0284c7;
+      border-color: #38bdf8;
+      transform: translateY(-50%) scale(1.1);
+    }
+    .floating-nav-arrow:disabled {
+      opacity: 0.2 !important;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .floating-nav-prev { left: 18px; }
+    .floating-nav-next { right: 18px; }
+
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="header-left">
-      <a class="back-btn" href="./index.html">← முகப்பு (Home)</a>
-      <div class="book-title" id="bookTitle">தமிழ்நாடு அரசுப் பாடநூல்</div>
-    </div>
-    <div class="controls">
-      <button class="btn" id="zoomOutBtn" title="Zoom Out">🔍−</button>
-      <button class="btn" id="zoomInBtn" title="Zoom In">🔍+</button>
-      <button class="btn" id="fitWidthBtn" title="Fit to Width">↔️ அகலம்</button>
-      <div class="page-info">
-        பக். <input type="number" id="jumpPageInput" class="jump-input" min="1" value="1"> / <span id="totalPages">1</span>
+  <!-- Enterprise Glassmorphic Header (Clean 2-Row Responsive Toolbar) -->
+  <header class="viewer-header-bar">
+    <!-- Row 1: Document Identity & Actions -->
+    <div class="header-row header-row-top">
+      <div class="header-left">
+        <span class="doc-badge">தமிழ்நாடு</span>
+        <span class="doc-title" id="docTitle">அரசுப் பாடநூல்</span>
       </div>
-      <button class="btn" id="downloadBtn" title="PDF கோப்பைப் பதிவிறக்கு">⬇️ சேமி</button>
+      <div class="header-right">
+        <span class="status-dot" id="cacheStatusDot" title="ஆஃப்லைன் சேமிப்பு நிலை"></span>
+        <button class="icon-action-btn" onclick="downloadPdf()" title="PDF கோப்பைப் பதிவிறக்கு (Download)">⬇️</button>
+        <button class="icon-action-btn" id="btnFullscreen" onclick="smartFullscreen()" title="முழுத்திரை (Fullscreen)">⛶</button>
+        <button class="icon-action-btn" id="btnPopout" onclick="openPopoutNewTab()" title="புதிய தாவலில் திற (Open in new tab / Pop-out)">↗️</button>
+      </div>
+    </div>
+
+    <!-- Row 2: Page Navigation & Zoom Controls (Always Visible Everywhere!) -->
+    <div class="header-row header-row-controls">
+      <div class="nav-page-group" id="navPageGroup">
+        <button class="tool-btn" id="btnPrevPage" onclick="navigatePage(-1)" title="முந்தைய பக்கம் (Previous Page)">◀ முந்தையது</button>
+        <span class="zoom-text" id="pageIndicator" style="color:#f8fafc; font-size:12px;">பக்கம்</span>
+        <button class="tool-btn" id="btnNextPage" onclick="navigatePage(1)" title="அடுத்த பக்கம் (Next Page)">அடுத்தது ▶</button>
+      </div>
+
+      <div class="header-center">
+        <button class="tool-btn" onclick="zoomChange(-0.25)" title="ஜூம் குறை (-)">&minus;</button>
+        <span class="zoom-text" id="zoomLabel">100%</span>
+        <button class="tool-btn" onclick="zoomChange(0.25)" title="ஜூம் அதிகரி (+)">&plus;</button>
+        <button class="tool-btn active" id="btnFitWidth" onclick="toggleFitToWidth()" title="திரையளவு தானாகப் பொருந்துதல் (Auto Fit Width)">⤢ திரையளவு</button>
+        <button class="tool-btn" onclick="resetZoom(1.0)" title="100% இயல்பு நிலை">100%</button>
+      </div>
     </div>
   </header>
 
-  <main id="mainViewer">
-    <button class="nav-arrow nav-prev" id="prevPageBtn" title="முந்தைய பக்கம் (Previous Page)">‹</button>
-    <button class="nav-arrow nav-next" id="nextPageBtn" title="அடுத்த பக்கம் (Next Page)">›</button>
+  <!-- Floating Center Screen Nav Turners (Auto-Fading Thumb Navigation) -->
+  <button class="floating-nav-arrow floating-nav-prev" id="floatingPrevBtn" onclick="navigatePage(-1)" title="முந்தைய பக்கம் (Previous Page)">‹</button>
+  <button class="floating-nav-arrow floating-nav-next" id="floatingNextBtn" onclick="navigatePage(1)" title="அடுத்த பக்கம் (Next Page)">›</button>
 
-    <div class="loading-overlay" id="loadingOverlay">
-      <div class="spinner"></div>
-      <div style="font-size:14px;color:#94a3b8;">பாடநூல் பக்கம் ஏற்றப்படுகிறது...</div>
-    </div>
 
-    <div id="canvasContainer">
+  <!-- 2D Viewport Scroll Area -->
+  <main class="viewport-scroll-area" id="scrollArea">
+    <div class="canvas-wrapper" id="canvasWrapper">
+      <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <div class="loading-text" id="loadingText">பக்கம் ஏற்றப்படுகிறது...</div>
+      </div>
       <canvas id="pdfCanvas"></canvas>
     </div>
   </main>
 
   <script>
-    if (typeof pdfjsLib !== 'undefined') {
-      pdfjsLib.GlobalWorkerOptions.workerSrc = './vendor/pdfjs/pdf.worker.min.js';
-    }
+    pdfjsLib.GlobalWorkerOptions.workerSrc = './vendor/pdfjs/pdf.worker.min.js';
 
+    // Parse URL params
     const params = new URLSearchParams(window.location.search);
-    const pdfUrl = params.get('pdf') || './books/2026-27/full_year/tamil/pages/page-001.pdf';
+    const pdfUrl = params.get('pdf') || './tamil/00_prelims/page_01.pdf';
+    const customTitle = params.get('title');
 
-    const bookTitleMap = {
-      'full_year/tamil': 'வகுப்பு 8 — தமிழ் (முழு ஆண்டு)',
-      'full_year/english': 'Class 8 — English (Full Year)',
-      'full_year/maths_tm': 'வகுப்பு 8 — கணிதம் (தமிழ் வழி — முழு ஆண்டு)',
-      'full_year/maths_em': 'Class 8 — Mathematics (English Medium — Full Year)',
-      'full_year/science_tm': 'வகுப்பு 8 — அறிவியல் (தமிழ் வழி — முழு ஆண்டு)',
-      'full_year/science_em': 'Class 8 — Science (English Medium — Full Year)',
-      'full_year/social_science_tm': 'வகுப்பு 8 — சமூக அறிவியல் (தமிழ் வழி — முழு ஆண்டு)',
-      'full_year/social_science_em': 'Class 8 — Social Science (English Medium — Full Year)',
-      'legacy-2018-2022/tamil': 'வகுப்பு 8 — தமிழ் (காப்பகம் 2019/2024)',
-      'legacy-2018-2022/english': 'Class 8 — English (Archive 2019/2024)',
-      'legacy-2018-2022/maths_tm': 'வகுப்பு 8 — கணிதம் (தமிழ் வழி — காப்பகம்)',
-      'legacy-2018-2022/maths_em': 'Class 8 — Mathematics (EM — Archive)',
-      'legacy-2018-2022/science_tm': 'வகுப்பு 8 — அறிவியல் (தமிழ் வழி — காப்பகம்)',
-      'legacy-2018-2022/science_em': 'Class 8 — Science (EM — Archive)',
-      'legacy-2018-2022/social_science_tm': 'வகுப்பு 8 — சமூக அறிவியல் (தமிழ் வழி — காப்பகம்)',
-      'legacy-2018-2022/social_science_em': 'Class 8 — Social Science (EM — Archive)'
-    };
+    // Check if embedded in iframe or running standalone
+    const isEmbedded = (window.self !== window.top) || (new URLSearchParams(window.location.search).get('embed') === '1');
+    const btnPopout = document.getElementById('btnPopout');
+    const navPageGroup = document.getElementById('navPageGroup');
+    const pageIndicator = document.getElementById('pageIndicator');
+    const btnPrevPage = document.getElementById('btnPrevPage');
+    const btnNextPage = document.getElementById('btnNextPage');
 
-    let detectedTitle = 'தமிழ்நாடு அரசுப் பாடநூல் — வகுப்பு 8';
-    for (const [key, title] of Object.entries(bookTitleMap)) {
-      if (pdfUrl.includes(key)) {
-        detectedTitle = title;
-        break;
-      }
+    let currentPageNum = 1;
+    const match = pdfUrl.match(/page[-_](\d+)\.pdf/);
+    if (match) {
+      currentPageNum = parseInt(match[1]);
     }
-    document.getElementById('bookTitle').textContent = detectedTitle;
-    document.title = detectedTitle + ' — தமிழ்நாடு அரசுப் பாடநூல்கள்';
 
-    let pagesList = [];
-    let currentIndex = -1;
-    let currentScale = 1.35;
-    let pdfDoc = null;
+    // Load the subject's page list (normal full book or dedicated book-back questions)
+    let pageList = null;
+    let pageListIndex = -1;
+    const isBookBackMode = params.get('mode') === 'book_back' || params.get('mode') === 'bookback' || window.location.href.includes('mode=book_back') || window.location.href.includes('mode=bookback');
 
-    // Detect book directory and fetch pages.json
-    let pagesJsonUrl = null;
-    let bookBaseDir = '';
+    // Universal bookDir resolution: works for both nested term books and direct subjects
+    let bookDir = null;
     if (pdfUrl.includes('/pages/')) {
-      bookBaseDir = pdfUrl.substring(0, pdfUrl.lastIndexOf('/pages/'));
-      pagesJsonUrl = bookBaseDir + '/pages.json';
+      bookDir = pdfUrl.substring(0, pdfUrl.lastIndexOf('/pages/'));
+    } else {
+      const parts = pdfUrl.replace(/^\.\//, '').split('/');
+      if (parts.length >= 2) {
+        bookDir = './' + parts[0];
+      }
     }
 
-    if (pagesJsonUrl) {
-      fetch(pagesJsonUrl)
-        .then(r => r.ok ? r.json() : null)
-        .then(list => {
-          if (Array.isArray(list)) {
-            pagesList = list.map(item => `${bookBaseDir}/${item}`);
-            document.getElementById('totalPages').textContent = pagesList.length;
-            
-            // Find current index
-            const norm = p => p.replace(/^(\.\/|\/)/, '');
-            currentIndex = pagesList.findIndex(p => norm(p) === norm(pdfUrl));
-            if (currentIndex >= 0) {
-              document.getElementById('jumpPageInput').value = currentIndex + 1;
-            }
-            updateNavButtons();
+    if (bookDir) {
+      const targetJsonUrl = isBookBackMode 
+        ? `${bookDir}/book_back_pages.json` 
+        : `${bookDir}/pages.json`;
+
+      fetch(targetJsonUrl).then(r => r.ok ? r.json() : null).then(list => {
+        if (!Array.isArray(list)) return;
+        pageList = list;
+        pageListIndex = list.indexOf(pdfUrl);
+        if (pageListIndex === -1) {
+          const norm = p => p.replace(/^\.\//, '');
+          const curNorm = norm(pdfUrl);
+          pageListIndex = list.findIndex(p => {
+            const pNorm = norm(p);
+            return pNorm === curNorm || curNorm.endsWith(pNorm) || pNorm.endsWith(curNorm);
+          });
+        }
+
+        if (isBookBackMode && pageListIndex !== -1) {
+          pageIndicator.textContent = `வினா ${pageListIndex + 1} / ${pageList.length}`;
+        } else {
+          pageIndicator.textContent = `பக்கம் ${currentPageNum}`;
+        }
+
+        if (pageListIndex <= 0) { btnPrevPage.disabled = true; if (floatingPrevBtn) floatingPrevBtn.disabled = true; }
+        else { btnPrevPage.disabled = false; if (floatingPrevBtn) floatingPrevBtn.disabled = false; }
+
+        if (pageListIndex === list.length - 1) { btnNextPage.disabled = true; if (floatingNextBtn) floatingNextBtn.disabled = true; }
+        else { btnNextPage.disabled = false; if (floatingNextBtn) floatingNextBtn.disabled = false; }
+      }).catch(() => { pageList = null; });
+    }
+
+    
+    // ----------------------------------------------------
+    // Auto-Fade Center Floating Navigation Turners
+    // ----------------------------------------------------
+    let navHideTimer = null;
+    let isHoveringFloatingNav = false;
+
+    const floatingPrevBtn = document.getElementById('floatingPrevBtn');
+    const floatingNextBtn = document.getElementById('floatingNextBtn');
+
+    function showFloatingNav() {
+      if (floatingPrevBtn) floatingPrevBtn.classList.add('visible');
+      if (floatingNextBtn) floatingNextBtn.classList.add('visible');
+
+      clearTimeout(navHideTimer);
+      navHideTimer = setTimeout(() => {
+        if (!isHoveringFloatingNav) {
+          if (floatingPrevBtn) floatingPrevBtn.classList.remove('visible');
+          if (floatingNextBtn) floatingNextBtn.classList.remove('visible');
+        }
+      }, 2500);
+    }
+
+    [floatingPrevBtn, floatingNextBtn].forEach(btn => {
+      if (btn) {
+        btn.addEventListener('mouseenter', () => { isHoveringFloatingNav = true; });
+        btn.addEventListener('mouseleave', () => { 
+          isHoveringFloatingNav = false; 
+          showFloatingNav(); 
+        });
+      }
+    });
+
+    document.addEventListener('mousemove', showFloatingNav);
+    document.addEventListener('touchstart', showFloatingNav, { passive: true });
+    showFloatingNav();
+
+    // Always keep page navigation arrows & popout visible everywhere!
+    if (navPageGroup) navPageGroup.style.display = 'flex';
+    if (btnPopout) btnPopout.style.display = 'flex';
+
+    // 📱 Touch Swipe Gesture (Mobile Thumb Navigation)
+    let viewerTouchStartX = 0;
+    let viewerTouchStartY = 0;
+    window.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches.length === 1) {
+        viewerTouchStartX = e.touches[0].clientX;
+        viewerTouchStartY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches.length === 1) {
+        const diffX = e.changedTouches[0].clientX - viewerTouchStartX;
+        const diffY = e.changedTouches[0].clientY - viewerTouchStartY;
+        if (Math.abs(diffX) > 60 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+          if (diffX < 0) {
+            navigatePage(1);
+          } else {
+            navigatePage(-1);
           }
-        })
-        .catch(() => {});
-    }
-
-    function updateNavButtons() {
-      const prevBtn = document.getElementById('prevPageBtn');
-      const nextBtn = document.getElementById('nextPageBtn');
-      if (pagesList.length > 0 && currentIndex >= 0) {
-        prevBtn.disabled = (currentIndex <= 0);
-        nextBtn.disabled = (currentIndex >= pagesList.length - 1);
-      } else {
-        prevBtn.disabled = true;
-        nextBtn.disabled = true;
-      }
-    }
-
-    async function renderPage() {
-      const loadingOverlay = document.getElementById('loadingOverlay');
-      loadingOverlay.classList.remove('hidden');
-      try {
-        const loadingTask = pdfjsLib.getDocument(pdfUrl);
-        pdfDoc = await loadingTask.promise;
-        const page = await pdfDoc.getPage(1);
-        
-        const canvas = document.getElementById('pdfCanvas');
-        const ctx = canvas.getContext('2d');
-        const viewport = page.getViewport({ scale: currentScale });
-        
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        
-        await page.render({ canvasContext: ctx, viewport: viewport }).promise;
-        loadingOverlay.classList.add('hidden');
-      } catch (err) {
-        console.error(err);
-        loadingOverlay.innerHTML = '<div style="color:#ef4444;font-weight:700;">பக்கம் ஏற்றுவதில் பிழை ஏற்பட்டது.<br><span style="font-size:12px;color:#94a3b8;">' + err.message + '</span></div>';
-      }
-    }
-
-    function navigateTo(idx) {
-      if (idx >= 0 && idx < pagesList.length) {
-        window.location.href = `./viewer.html?pdf=${encodeURIComponent(pagesList[idx])}`;
-      }
-    }
-
-    document.getElementById('prevPageBtn').addEventListener('click', () => {
-      if (currentIndex > 0) navigateTo(currentIndex - 1);
-    });
-
-    document.getElementById('nextPageBtn').addEventListener('click', () => {
-      if (currentIndex >= 0 && currentIndex < pagesList.length - 1) navigateTo(currentIndex + 1);
-    });
-
-    document.getElementById('jumpPageInput').addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        const pNum = parseInt(e.target.value, 10);
-        if (pNum >= 1 && pNum <= pagesList.length) {
-          navigateTo(pNum - 1);
         }
       }
-    });
+    }, { passive: true });
+    if (!isBookBackMode) {
+      pageIndicator.textContent = `பக்கம் ${currentPageNum}`;
+      if (currentPageNum <= 1) { btnPrevPage.disabled = true; if (floatingPrevBtn) floatingPrevBtn.disabled = true; }
+    }
 
-    document.getElementById('zoomInBtn').addEventListener('click', () => {
-      currentScale += 0.2;
-      renderPage();
-    });
+    const docTitle = document.getElementById('docTitle');
+    if (customTitle) {
+      docTitle.textContent = customTitle;
+    } else if (match) {
+      docTitle.textContent = `இயல் பக்கம் ${currentPageNum}`;
+    }
 
-    document.getElementById('zoomOutBtn').addEventListener('click', () => {
-      if (currentScale > 0.6) {
-        currentScale -= 0.2;
-        renderPage();
+    let pdfDoc = null;
+    let baseViewport = null;
+    let currentScale = 1.0;
+    let isFitToWidthMode = true; // Auto-fit width responsive mode by default!
+    let isRendering = false;
+    let renderPending = false;
+
+    // Check stored user zoom preference from this reading session
+    const savedZoomMode = sessionStorage.getItem('tn_reader_zoom_mode');
+    if (savedZoomMode && savedZoomMode !== 'auto') {
+      const parsed = parseFloat(savedZoomMode);
+      if (!isNaN(parsed) && parsed >= 0.4 && parsed <= 4.0) {
+        currentScale = parsed;
+        isFitToWidthMode = false;
       }
-    });
+    }
 
-    document.getElementById('fitWidthBtn').addEventListener('click', () => {
-      currentScale = 1.2;
-      renderPage();
-    });
+    const scrollArea = document.getElementById('scrollArea');
+    const canvas = document.getElementById('pdfCanvas');
+    const ctx = canvas.getContext('2d');
+    const zoomLabel = document.getElementById('zoomLabel');
+    const btnFitWidth = document.getElementById('btnFitWidth');
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    const cacheStatusDot = document.getElementById('cacheStatusDot');
+    const canvasWrapper = document.getElementById('canvasWrapper');
 
-    document.getElementById('downloadBtn').addEventListener('click', () => {
+    if (!isFitToWidthMode) {
+      btnFitWidth.classList.remove('active');
+    }
+
+    // ----------------------------------------------------
+    // Page Turners Navigation (Standalone Mode - Retains Zoom!)
+    // ----------------------------------------------------
+    function navigatePage(direction) {
+      // 1. Notify parent shell to synchronize outer UI if embedded
+      try {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'tn_navigate', action: 'navigate_page', direction: direction > 0 ? 'next' : 'prev' }, '*');
+        }
+      } catch (e) {}
+
+      // 2. Direct page flip according to pageList (normal book or book-back sequence)!
+      if (pageList && pageListIndex !== -1) {
+        const targetIndex = pageListIndex + direction;
+        if (targetIndex < 0 || targetIndex >= pageList.length) return;
+        const newSearch = new URLSearchParams(window.location.search);
+        newSearch.set('pdf', pageList[targetIndex]);
+        newSearch.delete('title');
+        window.location.search = newSearch.toString();
+        return;
+      }
+
+      // In book back mode, do NOT naively step into sequential non-exercise pages
+      if (isBookBackMode) {
+        console.warn('Book-back page list not loaded or current page not in index.');
+        return;
+      }
+
+      // Fallback: naive same-folder page number increment (used only if pages.json is unavailable)
+      const targetPage = currentPageNum + direction;
+      if (targetPage < 1) return;
+      const targetStr = targetPage.toString().padStart(3, '0');
+      const newUrl = pdfUrl.replace(/page[-_]\d+\.pdf/, `page-${targetStr}.pdf`);
+      const newSearch = new URLSearchParams(window.location.search);
+      newSearch.set('pdf', newUrl);
+      window.location.search = newSearch.toString();
+    }
+
+    // ----------------------------------------------------
+    // IndexedDB Cache Layer (100% Offline, Zero Redundant Downloads)
+    // ----------------------------------------------------
+    const DB_NAME = 'TNSchoolsPdfCache';
+    const DB_VERSION = 1;
+    const STORE_NAME = 'pdf_blobs';
+
+    function openCacheDB() {
+      return new Promise((resolve, reject) => {
+        const req = indexedDB.open(DB_NAME, DB_VERSION);
+        req.onupgradeneeded = (e) => {
+          const db = e.target.result;
+          if (!db.objectStoreNames.contains(STORE_NAME)) {
+            db.createObjectStore(STORE_NAME);
+          }
+        };
+        req.onsuccess = () => resolve(req.result);
+        req.onerror = () => reject(req.error);
+      });
+    }
+
+    async function getCachedPdf(key) {
+      try {
+        const db = await openCacheDB();
+        return new Promise((resolve) => {
+          const tx = db.transaction(STORE_NAME, 'readonly');
+          const store = tx.objectStore(STORE_NAME);
+          const req = store.get(key);
+          req.onsuccess = () => resolve(req.result || null);
+          req.onerror = () => resolve(null);
+        });
+      } catch (e) {
+        return null;
+      }
+    }
+
+    async function setCachedPdf(key, arrayBuffer) {
+      try {
+        const db = await openCacheDB();
+        const tx = db.transaction(STORE_NAME, 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        store.put(arrayBuffer, key);
+      } catch (e) {
+        console.warn('Cache write failed:', e);
+      }
+    }
+
+    // ----------------------------------------------------
+    // Progressive PDF Loading Pipeline
+    // ----------------------------------------------------
+    async function loadPdfDocument() {
+      const cached = await getCachedPdf(pdfUrl);
+      let pdfData;
+
+      if (cached) {
+        pdfData = cached;
+        cacheStatusDot.classList.add('cached');
+        cacheStatusDot.title = 'மின்வேக ஆஃப்லைன் போன் மெமரி (IndexedDB)';
+      } else {
+        const response = await fetch(pdfUrl);
+        pdfData = await response.arrayBuffer();
+        await setCachedPdf(pdfUrl, pdfData);
+        cacheStatusDot.classList.add('cached');
+        cacheStatusDot.title = 'Cloudflare CDN-லிருந்து டவுன்லோட் ஆகி சேமிக்கப்பட்டது';
+      }
+
+      const loadingTask = pdfjsLib.getDocument({ data: pdfData });
+      pdfDoc = await loadingTask.promise;
+      const page = await pdfDoc.getPage(1);
+      baseViewport = page.getViewport({ scale: 1.0 });
+
+      // Automatically calculate scale to fit current screen width if in auto-fit mode
+      if (isFitToWidthMode) {
+        calculateAutoFitScale();
+      }
+
+      await renderPage(currentScale);
+      loadingOverlay.classList.add('hidden');
+    }
+
+    function calculateAutoFitScale() {
+      const availableWidth = scrollArea.clientWidth - 32;
+      currentScale = Math.min(2.0, Math.max(0.45, availableWidth / baseViewport.width));
+    }
+
+    // ----------------------------------------------------
+    // Dynamic Responsive Resizing (Orientation & Window Changes)
+    // ----------------------------------------------------
+    let resizeTimer = null;
+    function handleResponsiveResize() {
+      if (!baseViewport || !isFitToWidthMode) return;
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        calculateAutoFitScale();
+        renderPage(currentScale);
+      }, 150);
+    }
+    window.addEventListener('resize', handleResponsiveResize);
+    window.addEventListener('orientationchange', handleResponsiveResize);
+
+    // ----------------------------------------------------
+    // HD Retina Canvas Rendering
+    // ----------------------------------------------------
+    async function renderPage(scale) {
+      if (isRendering) {
+        renderPending = true;
+        return;
+      }
+      isRendering = true;
+
+      const page = await pdfDoc.getPage(1);
+      const dpr = window.devicePixelRatio || 1;
+      const viewport = page.getViewport({ scale: scale });
+
+      // Canvas internal resolution (Vector Crisp)
+      canvas.width = Math.floor(viewport.width * dpr);
+      canvas.height = Math.floor(viewport.height * dpr);
+
+      // Display dimensions (matches viewport in CSS pixels)
+      canvas.style.width = Math.floor(viewport.width) + 'px';
+      canvas.style.height = Math.floor(viewport.height) + 'px';
+      canvasWrapper.style.width = Math.floor(viewport.width) + 'px';
+      canvasWrapper.style.height = Math.floor(viewport.height) + 'px';
+
+      // Update draggable cursor class when zoomed in
+      if (scale > 1.15) {
+        canvasWrapper.classList.add('draggable');
+      } else {
+        canvasWrapper.classList.remove('draggable');
+      }
+
+      const renderContext = {
+        canvasContext: ctx,
+        viewport: viewport,
+        transform: dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null
+      };
+
+      await page.render(renderContext).promise;
+      isRendering = false;
+
+      zoomLabel.textContent = Math.round(scale * 100) + '%';
+
+      if (renderPending) {
+        renderPending = false;
+        renderPage(currentScale);
+      }
+    }
+
+    // ----------------------------------------------------
+    // Zoom Controls & Session Memory
+    // ----------------------------------------------------
+    function zoomChange(delta) {
+      isFitToWidthMode = false;
+      btnFitWidth.classList.remove('active');
+      const newScale = Math.max(0.4, Math.min(4.0, currentScale + delta));
+      if (Math.abs(newScale - currentScale) > 0.04) {
+        currentScale = newScale;
+        sessionStorage.setItem('tn_reader_zoom_mode', currentScale.toFixed(2));
+        renderPage(currentScale);
+      }
+    }
+
+    function toggleFitToWidth() {
+      isFitToWidthMode = true;
+      btnFitWidth.classList.add('active');
+      sessionStorage.setItem('tn_reader_zoom_mode', 'auto');
+      calculateAutoFitScale();
+      renderPage(currentScale);
+    }
+
+    function resetZoom(target) {
+      isFitToWidthMode = false;
+      btnFitWidth.classList.remove('active');
+      currentScale = target || 1.0;
+      sessionStorage.setItem('tn_reader_zoom_mode', currentScale.toFixed(2));
+      renderPage(currentScale);
+    }
+
+    // ----------------------------------------------------
+    // Pop-out / Open in New Window (Pure Top-Level Context)
+    // ----------------------------------------------------
+    function openPopoutNewTab() {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('embed');
+      window.open(url.toString(), '_blank', 'noopener');
+    }
+
+    // ----------------------------------------------------
+    // Smart Fullscreen (Native + Multi-Vendor + Popout Fallback)
+    // ----------------------------------------------------
+    function smartFullscreen() {
+      const docEl = document.documentElement;
+      const isFull = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+
+      if (!isFull) {
+        const rfs = docEl.requestFullscreen || docEl.webkitRequestFullscreen || docEl.mozRequestFullScreen || docEl.msRequestFullscreen;
+        if (rfs) {
+          try {
+            const p = rfs.call(docEl);
+            if (p && p.catch) {
+              p.catch(() => {
+                openPopoutNewTab();
+              });
+            }
+          } catch (e) {
+            openPopoutNewTab();
+          }
+        } else {
+          openPopoutNewTab();
+        }
+      } else {
+        const efs = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
+        if (efs) {
+          efs.call(document);
+        }
+      }
+    }
+
+    // Update controls when fullscreen changes
+    function updateFullscreenMode() {
+      const btn = document.getElementById('btnFullscreen');
+      const isFull = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+      if (isFull) {
+        if (btn) {
+          btn.textContent = '✕';
+          btn.title = 'முழுத்திரையிலிருந்து வெளியேறு (Exit Fullscreen)';
+        }
+      } else {
+        if (btn) {
+          btn.textContent = '⛶';
+          btn.title = 'முழுத்திரை (Fullscreen)';
+        }
+      }
+    }
+
+    document.addEventListener('fullscreenchange', updateFullscreenMode);
+    document.addEventListener('webkitfullscreenchange', updateFullscreenMode);
+    document.addEventListener('mozfullscreenchange', updateFullscreenMode);
+    document.addEventListener('MSFullscreenChange', updateFullscreenMode);
+
+    // ----------------------------------------------------
+    // Download PDF
+    // ----------------------------------------------------
+    function downloadPdf() {
       const a = document.createElement('a');
       a.href = pdfUrl;
-      a.download = pdfUrl.split('/').pop() || 'book_page.pdf';
+      a.download = pdfUrl.split('/').pop() || 'tamil_book_page.pdf';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
+    }
+
+    // ----------------------------------------------------
+    // Mouse Drag / Pan when Zoomed In
+    // ----------------------------------------------------
+    let isMouseDown = false;
+    let startX, startY, scrollLeft, scrollTop;
+
+    scrollArea.addEventListener('mousedown', (e) => {
+      if (currentScale <= 1.1) return;
+      isMouseDown = true;
+      canvasWrapper.classList.add('grabbing');
+      startX = e.pageX - scrollArea.offsetLeft;
+      startY = e.pageY - scrollArea.offsetTop;
+      scrollLeft = scrollArea.scrollLeft;
+      scrollTop = scrollArea.scrollTop;
     });
 
-    // Keyboard navigation
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft' && currentIndex > 0) {
-        navigateTo(currentIndex - 1);
-      } else if (e.key === 'ArrowRight' && currentIndex >= 0 && currentIndex < pagesList.length - 1) {
-        navigateTo(currentIndex + 1);
-      }
+    scrollArea.addEventListener('mouseleave', () => {
+      isMouseDown = false;
+      canvasWrapper.classList.remove('grabbing');
     });
 
-    renderPage();
+    scrollArea.addEventListener('mouseup', () => {
+      isMouseDown = false;
+      canvasWrapper.classList.remove('grabbing');
+    });
+
+    scrollArea.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      e.preventDefault();
+      const x = e.pageX - scrollArea.offsetLeft;
+      const y = e.pageY - scrollArea.offsetTop;
+      const walkX = (x - startX) * 1.5;
+      const walkY = (y - startY) * 1.5;
+      scrollArea.scrollLeft = scrollLeft - walkX;
+      scrollArea.scrollTop = scrollTop - walkY;
+    });
+
+    // Start
+    loadPdfDocument().catch(err => {
+      console.error(err);
+      loadingOverlay.innerHTML = '<div style="color:#ef4444;font-weight:700;">பக்கம் ஏற்றுவதில் பிழை ஏற்பட்டது.</div>';
+    });
   </script>
 </body>
 </html>
